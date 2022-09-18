@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "b4d8ed1e-9073-44d4-88df-ccd96b86fecf",
+		"name": "RajaOngkirAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22666827"
+	},
+	"item": [
+		{
+			"name": "List Province",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 3s\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "1218703dc3236003ddf9398eb07cfe58",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{RajaOngkir}}/province",
+					"host": [
+						"{{RajaOngkir}}"
+					],
+					"path": [
+						"province"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List City",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 3s\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Bangka Selatan\");\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "key",
+						"value": "1218703dc3236003ddf9398eb07cfe58",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{RajaOngkir}}/city?id=29&province=2",
+					"host": [
+						"{{RajaOngkir}}"
+					],
+					"path": [
+						"city"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "29"
+						},
+						{
+							"key": "province",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Kulon Progo - DIY",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "key",
+								"value": "1218703dc3236003ddf9398eb07cfe58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{RajaOngkir}}/city?id=210&province=5",
+							"host": [
+								"{{RajaOngkir}}"
+							],
+							"path": [
+								"city"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "210"
+								},
+								{
+									"key": "province",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 18 Sep 2022 03:22:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache"
+						},
+						{
+							"key": "Content-Length",
+							"value": "233"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=15, max=99"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"rajaongkir\": {\n        \"query\": {\n            \"id\": \"210\",\n            \"province\": \"5\"\n        },\n        \"status\": {\n            \"code\": 200,\n            \"description\": \"OK\"\n        },\n        \"results\": {\n            \"city_id\": \"210\",\n            \"province_id\": \"5\",\n            \"province\": \"DI Yogyakarta\",\n            \"type\": \"Kabupaten\",\n            \"city_name\": \"Kulon Progo\",\n            \"postal_code\": \"55611\"\n        }\n    }\n}"
+				},
+				{
+					"name": "Sleman - DIY",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "key",
+								"value": "1218703dc3236003ddf9398eb07cfe58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{RajaOngkir}}/city?id=419&province=5",
+							"host": [
+								"{{RajaOngkir}}"
+							],
+							"path": [
+								"city"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "419"
+								},
+								{
+									"key": "province",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 18 Sep 2022 03:23:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache"
+						},
+						{
+							"key": "Content-Length",
+							"value": "228"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=15, max=99"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"rajaongkir\": {\n        \"query\": {\n            \"id\": \"419\",\n            \"province\": \"5\"\n        },\n        \"status\": {\n            \"code\": 200,\n            \"description\": \"OK\"\n        },\n        \"results\": {\n            \"city_id\": \"419\",\n            \"province_id\": \"5\",\n            \"province\": \"DI Yogyakarta\",\n            \"type\": \"Kabupaten\",\n            \"city_name\": \"Sleman\",\n            \"postal_code\": \"55513\"\n        }\n    }\n}"
+				},
+				{
+					"name": "Bangka Selatan - Kep.Bangka Belitung",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "key",
+								"value": "1218703dc3236003ddf9398eb07cfe58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{RajaOngkir}}/city?id=29&province=2",
+							"host": [
+								"{{RajaOngkir}}"
+							],
+							"path": [
+								"city"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "29"
+								},
+								{
+									"key": "province",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 18 Sep 2022 03:25:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache"
+						},
+						{
+							"key": "Content-Length",
+							"value": "236"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=15, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"rajaongkir\": {\n        \"query\": {\n            \"id\": \"29\",\n            \"province\": \"2\"\n        },\n        \"status\": {\n            \"code\": 200,\n            \"description\": \"OK\"\n        },\n        \"results\": {\n            \"city_id\": \"29\",\n            \"province_id\": \"2\",\n            \"province\": \"Bangka Belitung\",\n            \"type\": \"Kabupaten\",\n            \"city_name\": \"Bangka Selatan\",\n            \"postal_code\": \"33719\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Cost",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 3s\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "key",
+						"value": "1218703dc3236003ddf9398eb07cfe58"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "origin",
+							"value": "419",
+							"type": "text"
+						},
+						{
+							"key": "destination",
+							"value": "29",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "1700",
+							"type": "text"
+						},
+						{
+							"key": "courier",
+							"value": "jne",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.rajaongkir.com/starter/cost",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rajaongkir",
+						"com"
+					],
+					"path": [
+						"starter",
+						"cost"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
