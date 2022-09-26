@@ -1,5 +1,5 @@
-# newman-reporter-htmlextra
-Automation Testing API RajaOngkir menggunakan newman-reporter-htmlextra
+# api_testing_automation_using_newman
+Testing API RajaOngkir menggunakan Newman
 
 Sebelum memulai automation testing menggunakan newman, hal yang perlu diperhatikan adalah "**Install dulu Node.js, Python, Newman dan reporter-htmlextra nya**"
 
